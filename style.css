@@ -1,0 +1,299 @@
+/* Sources used: 
+https://www.geeksforgeeks.org/
+W3 school
+Course resources
+*/
+
+
+body#content-page{
+	background: rgb(227, 217, 217);
+	text-align: center;
+
+	display: grid;
+	grid-template-areas:
+	    "header header header header"
+		"sidebar content content content"
+		;
+}
+
+body#login-page{
+  background-image: url("test-background.jpg");
+  background-size: cover;
+	text-align: center;
+  
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+ul.fireflies {
+  list-style: none;
+}
+
+li {
+  border-radius: 60%;
+  background-color: rgb(239, 239, 149);
+  background-image: radial-gradient(rgb(246, 211, 73) 5%,
+                                    rgb(247, 202, 97) 25%,
+                                    rgb(245, 231, 188) 60%);
+  box-shadow: 0 0 5px 2px rgb(164, 163, 163), 
+              0 0 20px 10px rgb(204, 203, 200),
+              0 0 40px 15px rgb(219, 218, 213);
+  height: 5px;
+  width: 5px;
+  top: -20px;
+  position: absolute;
+  animation: leftright 24s infinite cubic-bezier(0.39, 0, 0.63, 1),
+      updown 8s infinite 1.25s cubic-bezier(0.39, 0, 0.63, 1),
+      blinking 20s infinite;
+}
+
+/*the fireflies; setting how a CSS animation applies styles to target before and after execution.*/
+li:nth-of-type(1) {
+  animation-delay: 1s;
+  animation-duration: 65s, 81s, 0.01s;
+  animation-fill-mode: backwards, backwards;
+}
+
+li:nth-of-type(2) {
+  animation-delay: 0.5s;
+  animation-duration: 80s, 75s, 0.01s;
+}
+
+li:nth-of-type(3) {
+  animation-delay: 1.5s;
+  animation-duration: 70s, 60s, 0.01s;
+  animation-fill-mode: backwards, backwards;
+}
+
+li:nth-of-type(4) {
+  animation-delay: 2.5s;
+  animation-duration: 90s, 80s, 0.01s;
+}
+
+li:nth-of-type(5) {
+  animation-delay: 0.3s;
+  animation-duration: 55s, 75s, 0.01s;
+}
+
+li:nth-of-type(6) {
+  animation-delay: 2.2s;
+  animation-duration: 79s, 63s, 0.01s;
+  animation-fill-mode: backwards, backwards;
+}
+
+li:nth-of-type(7) {
+  animation-delay: 0.9s;
+  animation-duration: 70s, 80s, 0.01s;
+}
+
+li:nth-of-type(8) {
+  animation-delay: 1.6s;
+  animation-duration: 50s, 40s, 0.01s;
+  animation-fill-mode: backwards, backwards;
+}
+
+li:nth-of-type(9) {
+  animation-delay: 1.8s;
+  animation-duration: 77s, 88s, 0.01s;
+}
+
+li:nth-of-type(10) {
+  animation-delay: 3s;
+  animation-duration: 87s, 73s, 0.01s;
+  animation-fill-mode: backwards, backwards;
+}
+
+li:nth-of-type(11) {
+  animation-delay: 1s;
+  animation-duration: 60s, 78s, 0.01s;
+  animation-fill-mode: backwards, backwards;
+}
+
+li:nth-of-type(12) {
+  animation-delay: 0.5s;
+  animation-duration: 85s, 80s, 0.01s;
+}
+
+li:nth-of-type(13) {
+  animation-delay: 1.5s;
+  animation-duration: 75s, 66s, 0.01s;
+  animation-fill-mode: backwards, backwards;
+}
+
+
+
+/* It will create the left right movement */
+@keyframes leftright {
+
+  0%,
+  100% {
+      left: 80%;
+  }
+  16.666% {
+      left: 95%;
+  }
+  33.333% {
+      left: 10%;
+  }
+  50% {
+      left: 60%;
+  }
+  66.666% {
+      left: 70%;
+  }
+  83.333% {
+      left: 5%;
+  }
+}
+
+/* It will create the up down movement */
+@keyframes updown {
+  0%,
+  100% {
+      top: 10px;
+  }
+  25% {
+      top: 90%;
+  }
+  50% {
+      top: 50%;
+  }
+  75% {
+      top: 95%;
+  }
+}
+
+/* Will create mild blinking effect */
+@keyframes blinking {
+
+	30% { 
+    opacity: 0.9;
+	}
+
+	60% { opacity: 1;}
+
+}
+
+
+
+div#login_box{
+  background: rgb(227, 217, 217);
+  outline:5px solid  rgb(233, 212, 144);
+
+}
+
+div#login_container{
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 5px;
+
+
+}
+
+div#login_container2{
+  background: rgb(172, 167, 167);
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+
+
+header{
+	top: 0;
+	grid-area: header;
+  background: rgb(4, 3, 3);
+  
+
+}
+
+#login-page h1{
+  font-family: 'Noto Serif JP', serif;
+}
+
+#content-page h1{
+  font-family: 'Noto Serif JP', serif;
+ color: aliceblue;
+}
+
+#content-page h2{
+  color: aliceblue;
+  font-family: 'Homemade Apple', cursive;
+}
+
+div#sidebar {
+    width: 250px;
+    overflow: scroll;
+    background: rgb(166, 165, 167);
+	  grid-area: sidebar;
+    height: 100vh;
+    
+}
+
+div#sidebar a{  
+	padding: 10px 10px 10px 10px;
+	 display: block;
+}
+
+
+main {
+	grid-area: content;
+
+}
+
+  
+@media screen and (max-width: 800px) {
+	body {
+		grid-template-areas: "header" "sidebar" "content";
+	}
+}
+
+  .original:hover {
+    opacity: 0.5;
+  }
+  
+ 
+  
+  /* The expanding image container */
+  .container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    height: 90vh;
+  
+  }
+
+  #expandedImg{
+    max-height: 90vh;
+    object-fit: contain;
+  }
+
+  .upload_container{
+  background-color: rgb(233, 212, 144);
+  height: 30px;
+
+}
+
+  /* Closable button */
+  .closebtn {
+
+    position: relative;
+    float: right;
+    padding-right: 50px;
+    
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }
+
+  /*the thumbnail version in the sidebar */
+.original{
+  width: 100px;
+	height: 100px;
+  }
+
